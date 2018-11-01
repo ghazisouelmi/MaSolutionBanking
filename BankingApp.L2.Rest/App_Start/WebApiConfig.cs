@@ -14,6 +14,8 @@ namespace BankingApp.L2.Rest
 
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
+            // Probleme de CORS (Communication Front avec le WS)
+            config.EnableCors();
 
             // Web API routes
             config.MapHttpAttributeRoutes();
